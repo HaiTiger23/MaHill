@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affine</title>
+    <link href="/dist/output.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script  src="./index.js"></script>
+</head>
+
+<body class="">
+    <div class="p-5 w-[500px] ">
+        <div>
+            <h1 class="text-2xl font-bold ">Hệ mã affine</h1>
+            <div>
+                <div>
+                    <hr>
+                    <p>Nhập vào a, b:</p>
+                    <div class="  flex space-x-2 ">
+                        <input type="number"  value="19" class="border w-[50%] border-black" id="a" placeholder="a">
+                        <input type="number" value="3"  class="border w-[50%] border-black" id="b" placeholder="b">
+                    </div>
+                </div>
+                <div class="my-2">
+                    <hr>
+                    <p>Nhập vào từ cần mã hóa</p>
+                    <div>
+                        <input type="text" class="  border-black border-2" value="BILL" id="textEncode">
+                        <button id="encode"
+                            class="border-black border bg-white px-2 hover:bg-gray-600 hover:text-white transition-all duration-200"
+                            onclick="encrypt()">Mã hóa</button>
+                    </div>
+                </div>
+                <div class="my-2">
+                    <hr>
+                    <p>Nhập vào từ cần giải mã</p>
+                    <div>
+                        <input type="text" value="WZEE"  class="  border-black border-2" id="textDecode">
+                        <button id="encode"
+                            class="border-black border bg-white px-2 hover:bg-gray-600 hover:text-white transition-all duration-200"
+                            onclick="decrypt()">Giải mã</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div x-data class=" m-10  h-[500px]  top-0 right-0">
+        <div class="bg-slate-800 text-white flex justify-between cursor-pointer" x-on:click="">
+            <p>Kết quả hiển thị</p>
+        </div>
+        <div id="consoleResult" class="h-full w-full bg-slate-400 text-white overflow-scroll px-2  resize-y "
+            >
+            
+        </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+</body>
+<script src="./js/affine/decrypt.js"></script>
+<script src="./js/affine/encrypt.js"></script>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chữ ký số elgamal</title>
+    <link href="/dist/output.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="./index.js"></script>
+</head>
+
+<body class="  ">
+    <div class="p-5 w-[500px] ">
+        <div>
+            <h1 class="text-2xl font-bold ">Chữ ký số elgamal</h1>
+            <div>
+                <div>
+                    <hr>
+                    <p>Nhập vào p, Alpha, a:</p>
+                    <div class="  flex space-x-2 ">
+                        <input type="text" class="border w-[50%] border-black" id="p" placeholder="p" value="467">
+                    </div>
+                    <div class="  flex space-x-2 ">
+                        <input type="text" class="border w-[50%] border-black" id="alpha" placeholder="alpha" value="2">
+                    </div>
+                    <div class="flex space-x-2 ">
+                        <input type="text" class="border w-[50%] border-black" id="a" placeholder="a" value="127">
+                    </div>
+                    <div class="flex space-x-2 ">
+                        <input type="text" class="border w-[50%] border-black" id="k" value="213" placeholder="k">
+                    </div>
+                </div>
+                <div class="my-2">
+                    <hr>
+                    <p>Nhập vào x:</p>
+                    <div>
+                        <input type="number" class="  border-black border-2" id="textEncode" value="100" placeholder="x">
+                        <button id="encode"
+                            class="border-black border bg-white px-2 hover:bg-gray-600 hover:text-white transition-all duration-200"
+                            onclick="encrypt()">Ký bức điện</button>
+                    </div>
+                </div>
+                <div class="my-2">
+                    <hr>
+                    <p>Nhập vào γ,δ:</p>
+                    <div class="  flex space-x-2 ">
+                        <input type="text" class="border w-[50%] border-black" id="beta" placeholder="beta" value="132" >
+                    </div>
+                    <div class="  flex space-x-2 ">
+                        <input type="text" class="border w-[50%] border-black" id="gama" placeholder="gama" value="31">
+                    </div>
+                    <div class="  flex space-x-2 ">
+                        <input type="text" class="border w-[50%] border-black" id="delta" placeholder="delta" value="67">
+                    </div>
+                        <button id="encode"
+                            class="border-black border bg-white px-2 hover:bg-gray-600 hover:text-white transition-all duration-200"
+                            onclick="decrypt()">Xác minh chữ ký</button>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div x-data class=" my-10 mx-2 w-full md:w-[500px] h-[500px] ">
+        <div class="  flex justify-start space-x-2 p-2 rounded-xl mb-3" x-on:click="">
+            <p>Kết quả hiển thị</p>
+            <button type="button" onclick="clearConsole()"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 me-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Lau
+                bảng</button>
+
+        </div>
+        <div id="consoleResult" class="h-full w-full bg-slate-400 text-white overflow-scroll px-2 ">
+            Sẵn sàng hoạt động
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+</body>
+<script src="./js/Elgamal/decrypt.js"></script>
+<script src="./js/Elgamal/encrypt.js"></script>
+
+</html>

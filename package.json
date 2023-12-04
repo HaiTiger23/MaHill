@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "start": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "start:production": "NODE_ENV=production nodemon sever.js",
+    "test": "node ./test/index.js"
+  },
+  "dependencies": {
+    "mathjs": "^11.10.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}

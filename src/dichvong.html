@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch vòng</title>
+    <link href="/dist/output.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script  src="./index.js"></script>
+</head>
+
+<body class=" ">
+    <div class="p-5 w-[500px] ">
+        <div>
+            <h1 class="text-2xl font-bold ">Hệ mã Dịch vòng</h1>
+            <div>
+                <div>
+                    <hr>
+                    <p>Nhập vào khóa:</p>
+                    <div class="  flex space-x-2 ">
+                        <input type="number"  class="border w-[50%] border-black" id="key" placeholder="key">
+                    </div>
+                </div>
+                <div class="my-2">
+                    <hr>
+                    <p>Nhập vào từ cần mã hóa</p>
+                    <div>
+                        <input type="text" class="  border-black border-2" id="textEncode">
+                        <button id="encode"
+                            class="border-black border bg-white px-2 hover:bg-gray-600 hover:text-white transition-all duration-200"
+                            onclick="encrypt()">Mã hóa</button>
+                    </div>
+                </div>
+                <div class="my-2">
+                    <hr>
+                    <p>Nhập vào từ cần giải mã</p>
+                    <div>
+                        <input type="text"   class="  border-black border-2" id="textDecode">
+                        <button id="encode"
+                            class="border-black border bg-white px-2 hover:bg-gray-600 hover:text-white transition-all duration-200"
+                            onclick="descrypt()">Giải mã</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div x-data class=" m-10 w-[500px] h-[500px]  top-0 right-0">
+        <div class="bg-slate-800 text-white flex justify-between cursor-pointer" x-on:click="">
+            <p>Kết quả hiển thị</p>
+        </div>
+        <textarea id="consoleResult" class="h-full w-full bg-slate-400 text-white overflow-scroll px-2  resize-y "
+            disabled>
+            Sẵn sàng hoạt động
+        </textarea>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+</body>
+<script src="./js/dichvong/descrypt.js"></script>
+<script src="./js/dichvong/encrypt.js"></script>
+
+</html>
